@@ -19,7 +19,7 @@ public class HomePgObject extends BasicPageObject {
 	
 	final static Logger logger = Logger.getLogger(HomePgObject.class);
 	public static String PAGE_TITLE = "Home Page";
-	public static LandingPgObject landingPgObject;
+	public static LoginPgObject loginPgObject;
 	
 	public HomePgObject(WebDriver driver) {
 		super(driver);
@@ -31,10 +31,10 @@ public class HomePgObject extends BasicPageObject {
 		PgObjctModel.checkPageIsReady(driver, PAGE_TITLE);
 	}
 	
-	public LandingPgObject clickIRLoginBtn(){
+	public LoginPgObject clickIRLoginBtn(){
 		irLoginBtn.click();
-		landingPgObject = new LandingPgObject(driver);
-		return landingPgObject;
+		loginPgObject = new LoginPgObject(driver);
+		return loginPgObject;
 	}
 
 }
